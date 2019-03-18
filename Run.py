@@ -1,11 +1,11 @@
 #***********************************************************************#
-#Author: Zeeshan Mansoor												#
+#Author: Zeeshan Mansoor						#
 #Use this code to get D2V embs of the content present in the Data folder#
 #d2v embs will be retrofited and classification score will be saved in	#
-#the Classication_Result folder											#
+#the Classication_Result folder						#
 #It will also visualize the embeddings and will save the images in the 	#
-#Classifcation folder too												#
-#																		#
+#Classifcation folder too						#
+#									#									#
 #***********************************************************************#
 from GetD2VEmb import *
 from Classification import *
@@ -63,24 +63,24 @@ log_file = "20190317_Retrofit.txt"
 beta = 0.5
 
 #****Will get d2v embs and get classification score******
-#GetD2V(data_path,emb_output,d2v_emb,size=100,window=10,negative=15,min_count=10)
+GetD2V(data_path,emb_output,d2v_emb,size=100,window=10,negative=15,min_count=10)
 model = embeddings(emb_output+d2v_emb)
-#runClassify(model,d2v_emb,"lr",7,10)
+runClassify(model,d2v_emb,"lr",7,10)
 initialize(model,data_path,log_path,"D2V_PCA.jpg",1)
 
 links = read_lexicon(flinks) #read links/citations
 
 #****Will do original retrofitting on d2v embs and get classification score******
-#orig_new_docvec = retrofitOrig(model,links,10,beta)
-#runClassify(orig_new_docvec,"origRetro","lr",7,10)
+orig_new_docvec = retrofitOrig(model,links,10,beta)
+runClassify(orig_new_docvec,"origRetro","lr",7,10)
 #Visualize the embs
-#initialize(orig_new_docvec,data_path,log_path,"OrigRetro_PCA.jpg",1)
+initialize(orig_new_docvec,data_path,log_path,"OrigRetro_PCA.jpg",1)
 
 #****Will do advance retrofitting on d2v embs and get classification score******
-#adv_new_docvec = retrofit(model,links,10,beta)
-#runClassify(adv_new_docvec,"advRetro","lr",7,10)
+adv_new_docvec = retrofit(model,links,10,beta)
+runClassify(adv_new_docvec,"advRetro","lr",7,10)
 #Visualize the embs
-#initialize(adv_new_docvec,data_path,log_path,"AdvRetro_PCA.jpg",1)
+initialize(adv_new_docvec,data_path,log_path,"AdvRetro_PCA.jpg",1)
 
 
 
