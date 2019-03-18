@@ -1,6 +1,6 @@
 Retrofitting
 This code is used for improving document embedding obtained from PV-DBOW by adding citation information. Our 
-experimentation shows that the addition of network information improves classification score for atleast 5% to 7%.
+experimentation shows that the addition of network information improves classification score by atleast 5% to 7%.
 
 Requirement: Python 2.7
 
