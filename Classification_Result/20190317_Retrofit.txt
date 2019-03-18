@@ -24,6 +24,7 @@ r: 0.9 micro: 0.6231914893617021 macro: 0.6231914893617021
 Data_path: Data/
 Emb: 20190315_DBLP_dim100_dm0_win10_mincount10_negative15.emb
 
+Orig Retrofit
 r: 0.7 micro: 0.6496984746363959 macro: 0.6496984746363959
 [[849  39  26]
  [ 60 658 257]
@@ -39,6 +40,7 @@ r: 0.9 micro: 0.6469148936170213 macro: 0.6469148936170213
 Data_path: Data/
 Emb: 20190315_DBLP_dim100_dm0_win10_mincount10_negative15.emb
 
+Adv Retrofit
 r: 0.7 micro: 0.6672224192976233 macro: 0.6672224192976233
 [[911  26  10]
  [ 45 668 256]

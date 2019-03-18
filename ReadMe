@@ -1,0 +1,21 @@
+Retrofitting
+This code is used for improving document embedding obtained from PV-DBOW by adding citation information. Our 
+experimentation shows that the addition of network information improves classification score by atleast 5% to 7%.
+
+Requirement: Python 2.7
+
+Data: 
+idxs.txt: contains ids of the documents
+id1
+id2
+
+labels.txt: contains labels of the documents
+words.txt: contains content of the document
+
+Each line of idxs,labels and words file contain information of the same document
+
+#Running the program
+Run the following command:
+python Run.py
+
+This will produce d2v embs, it will then retrofit it. Along the way it will also do classification and visualize the embeddings using PCA. 
